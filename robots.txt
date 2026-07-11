@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pe7ace.github.io/sitemap.xml
