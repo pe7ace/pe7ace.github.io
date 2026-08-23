@@ -438,6 +438,42 @@ a:focus-visible {
 .engagement-list ul { margin: 0; padding: 0; border-top: 1px solid var(--line); list-style: none; }
 .engagement-list li { display: grid; grid-template-columns: minmax(0,1fr) 120px; gap: 1.5rem; padding: 1rem 0; border-bottom: 1px solid var(--line); font-size: .83rem; }
 .engagement-list li span:last-child { color: var(--muted); font-size: .74rem; text-align: right; }
+.engagement-list a:hover { color: var(--forest-light); }
+
+.featured-talk {
+  display: grid;
+  grid-template-columns: minmax(230px,.72fr) minmax(360px,1.28fr);
+  gap: clamp(1.5rem,3vw,3rem);
+  align-items: center;
+  margin-top: 3.5rem;
+  padding: clamp(1.5rem,3vw,2.5rem);
+  border: 1px solid rgba(23,63,52,.18);
+  border-radius: 4px;
+  background: rgba(255,253,248,.48);
+}
+
+.featured-talk h3 {
+  margin: .7rem 0 0;
+  font-family: var(--serif);
+  font-size: clamp(1.45rem,2.3vw,2.15rem);
+  font-weight: 600;
+  line-height: 1.22;
+}
+
+.featured-talk h3 a:hover { color: var(--forest-light); }
+.featured-talk__copy > p:not(.project-label) { margin: 1rem 0 0; color: var(--muted); font-size: .86rem; }
+.featured-talk__link { display: inline-flex; gap: .3rem; margin-top: 1.4rem; padding-bottom: .2rem; border-bottom: 1px solid var(--forest); color: var(--forest); font-size: .75rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.featured-talk__link:hover { color: var(--forest-light); }
+
+.featured-talk__media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #0c1d18;
+  box-shadow: 0 18px 42px rgba(23,63,52,.16);
+}
+
+.featured-talk__media iframe { display: block; width: 100%; height: 100%; border: 0; }
 
 .contact-section { padding: clamp(6rem,12vw,11rem) 0; }
 .contact-section h2 { max-width: 830px; margin: 1rem 0 0; font-family: var(--serif); font-size: clamp(2.6rem,5.4vw,5.8rem); font-weight: 500; letter-spacing: -.05em; line-height: 1.02; }
@@ -454,6 +490,7 @@ a:focus-visible {
   .profile-panel__inner { padding: 2rem; }
   .content { padding-inline: 3.5rem; }
   .bio-copy { grid-template-columns: 1fr; gap: 1.2rem; }
+  .featured-talk { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 860px) {
